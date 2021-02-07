@@ -144,6 +144,19 @@ static constexpr StringView assistant_clippy[] =
       " ╰───╯  ",
       "        " };
 
+// http://touhou-aamatome.sakura.ne.jp/ (use archive.org)
+// http://touhou-aamatome.sakura.ne.jp/aa/koumakyou/cirno-frame.html
+// Original Shift-JIS art adjusted for monospace
+static constexpr StringView assistant_cirno[] =
+    { R"( 　 |＼／|   )",
+      R"(  ＜'´ ‾ ヽ ╭)",
+      R"(___彡ﾉﾒﾉﾉﾘ〉│)",
+      R"(＼ ｿﾘ!ﾟヮﾟﾉ ╯)",
+      R"(  ＞(つ!>つ  )",
+      R"( / ,<／/|ゝ  )",
+      R"( ‾   lﾉlﾉ    )",
+      R"(             )"};
+
 static constexpr StringView assistant_dilbert[] =
     { R"(  დოოოოოდ   )",
       R"(  |     |   )",
@@ -1309,6 +1322,8 @@ void NCursesUI::set_ui_options(const Options& options)
             m_assistant = assistant_cat;
         else if (it->value == "dilbert")
             m_assistant = assistant_dilbert;
+        else if (it->value == "cirno")
+            m_assistant = assistant_cirno;
         else if (it->value == "none" or it->value == "off")
             m_assistant = ConstArrayView<StringView>{};
     }
