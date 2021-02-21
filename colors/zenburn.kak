@@ -6,6 +6,8 @@ evaluate-commands %sh{
     zenselectionbg="rgb:3f7fcc"
     zencursor="rgb:2a2a2a,rgb:dfdfbf"
     zencursoreol="rgb:2a2a2a,rgb:cc9393"
+    zensecondarycursor="rgb:2a2a2a,rgb:a0a080"
+    zensecondarycursoreol="rgb:2a2a2a,rgb:a07676"
     zensecondaryfg="rgb:2a2a2a"
     zendefault="${zentext},rgb:3f3f3f"
     zenstatus="rgb:efdcbc,rgb:2a2a2a"
@@ -59,9 +61,9 @@ evaluate-commands %sh{
         face global PrimarySelection ${zentext},${zenselectionbg}+fg
         face global SecondarySelection ${zensecondaryfg},${zenselectionbg}+fg
         face global PrimaryCursor ${zencursor}+fg
-        face global SecondaryCursor ${zencursor}+fg
+        face global SecondaryCursor ${zensecondarycursor}+fg
         face global PrimaryCursorEol ${zencursoreol}+fg
-        face global SecondaryCursorEol ${zencursoreol}+fg
+        face global SecondaryCursorEol ${zensecondarycursoreol}+fg
         face global LineNumbers ${zendefault}
         face global LineNumberCursor ${zenstatus}
         face global MenuForeground ${zenmenufg}
